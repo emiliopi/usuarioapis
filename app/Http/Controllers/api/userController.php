@@ -15,7 +15,7 @@ class userController extends Controller
      */
     public function index()
     {
-        return User::all();
+        return User::all('name', 'age', 'gender');
     }
 
     /**
@@ -47,7 +47,12 @@ class userController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(User $id)
+    {
+        return $id;
+    }
+
+    public function informacion(User $user)
     {
         return $user;
     }
