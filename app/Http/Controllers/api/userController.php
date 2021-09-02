@@ -15,7 +15,7 @@ class userController extends Controller
      */
     public function index()
     {
-        return User::all('name', 'age', 'gender');
+        return User::all('id', 'name', 'age', 'gender');
     }
 
     /**
