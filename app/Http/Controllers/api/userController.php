@@ -36,8 +36,9 @@ class userController extends Controller
      */
     public function store(Request $request)
     {
+        
         $data = $request->all();
-        return User::created($data);
+        return User::create($data);
     }
 
     /**
